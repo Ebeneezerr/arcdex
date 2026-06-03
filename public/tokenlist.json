@@ -1,0 +1,30 @@
+{
+  "name": "AstroDEX Token List",
+  "timestamp": "2026-05-22T16:38:45.655Z",
+  "tokens": [
+    {
+      "chainId": 31337,
+      "address": "",
+      "symbol": "ATK",
+      "name": "Astro Token",
+      "decimals": 18,
+      "logoURI": "http://localhost:3000/tokens/atk.svg"
+    },
+    {
+      "chainId": 31337,
+      "address": "",
+      "symbol": "ATC",
+      "name": "Astro Coin",
+      "decimals": 18,
+      "logoURI": "http://localhost:3000/tokens/atc.svg"
+    },
+    {
+      "chainId": 31337,
+      "address": "",
+      "symbol": "USDC",
+      "name": "USDC",
+      "decimals": 18,
+      "logoURI": "http://localhost:3000/tokens/usdc.svg"
+    }
+  ]
+}

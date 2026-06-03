@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@hydra/dna-engine": ["../../packages/dna-engine/src/index.ts"],
+      "@hydra/dna-engine/*": ["../../packages/dna-engine/src/*"],
+      "@hydra/risk-engine": ["../../packages/risk-engine/src/index.ts"],
+      "@hydra/risk-engine/*": ["../../packages/risk-engine/src/*"],
+      "@hydra/listing-gate": ["../../packages/listing-gate/src/index.ts"],
+      "@hydra/listing-gate/*": ["../../packages/listing-gate/src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}

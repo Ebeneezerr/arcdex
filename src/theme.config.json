@@ -1,0 +1,16 @@
+{
+  "dashboardOrder": [
+    "governance",
+    "rewards",
+    "leaderboard",
+    "swap",
+    "liquidity",
+    "analytics"
+  ],
+  "dnaPersonality": "neo",
+  "sidebarPosition": "none",
+  "chartStyle": "bar",
+  "tableStyle": "comfortable",
+  "mobileBreakpoint": 640,
+  "maxContentWidth": 1100
+}

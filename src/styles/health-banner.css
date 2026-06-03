@@ -1,0 +1,46 @@
+.health-banner {
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-family-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing-unit) * 1);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  border: 1px solid transparent;
+}
+
+.health-banner--info {
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-color: var(--color-primary);
+}
+
+.health-banner--warn {
+  background: color-mix(in srgb, var(--color-warning) 10%, transparent);
+  border-color: var(--color-warning);
+}
+
+.health-banner--critical {
+  background: color-mix(in srgb, var(--color-danger) 15%, transparent);
+  border-color: var(--color-danger);
+}
+
+.health-banner__message {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.health-banner__cta {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius-sm);
+  transition: opacity var(--transition-speed) var(--transition-easing);
+}
+
+.health-banner__cta:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,47 @@
+{
+  "configVersion": "1.0.0",
+  "name": "AstroDEX DEX",
+  "chain": "<network>",
+  "chainId": 0,
+  "network": "<network>",
+  "deployedAt": "",
+  "deployer": "",
+  "modules": [],
+  "enabledModules": [],
+  "moduleMetadata": {},
+  "tokenAName": "TokenA",
+  "tokenASymbol": "TKA",
+  "tokenBName": "TokenB",
+  "tokenBSymbol": "TKB",
+  "tokens": [
+    { "symbol": "TKA", "name": "TokenA", "address": "" },
+    { "symbol": "TKB", "name": "TokenB", "address": "" }
+  ],
+  "pool": {
+    "volatileFeeBps": 0,
+    "stableFeeBps": 0,
+    "supportedPairs": []
+  },
+  "liquidity": {
+    "initialAmountA": "",
+    "initialAmountB": ""
+  },
+  "gasConfig": {},
+  "contracts": {
+    "tokenA": "",
+    "tokenB": "",
+    "router": "",
+    "bridge": "",
+    "faucet": "",
+    "pointsTracker": "",
+    "demoTrading": "",
+    "lendingPool": "",
+    "stakingRewards": "",
+    "yieldFarm": "",
+    "copyTrading": "",
+    "astrodexNFT": "",
+    "astrodexMarketplace": ""
+  },
+  "generatedAt": "",
+  "verification": {}
+}

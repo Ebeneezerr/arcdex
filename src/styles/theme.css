@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #a855f7;
+  --color-secondary: #ec4899;
+  --color-accent: #f59e0b;
+  --color-background: #0f0a1e;
+  --color-surface: #1a1030;
+  --color-surface-raised: #241840;
+  --color-text-primary: #f0e6ff;
+  --color-text-secondary: #c4a8ff;
+  --color-text-muted: #6b4fa0;
+  --color-border: #2d1f4a;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --font-family-primary: "Plus Jakarta Sans", sans-serif;
+  --font-family-mono: "Fira Code", monospace;
+  --font-size-base: 15px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 1.6;
+  --spacing-unit: 8px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-pill: 9999px;
+  --transition-speed: 180ms;
+  --transition-easing: cubic-bezier(0.34,1.56,0.64,1);
+  --animation-intensity: moderate;
+  --shadow-sm: 0 2px 8px rgba(168,85,247,0.15);
+  --shadow-md: 0 4px 16px rgba(168,85,247,0.2);
+  --shadow-lg: 0 8px 32px rgba(168,85,247,0.25);
+}
