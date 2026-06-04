@@ -1,5 +1,14 @@
 import { useState } from 'react';
-import type { TokenCheckResponse } from '@hydra/listing-gate';
+
+type TokenCheckResponse = {
+  safe: boolean;
+  score: number;
+  verdict: string;
+  blocked: boolean;
+  warnings: { code: string; severity: string; message: string }[];
+  timestamp: string;
+  cached: boolean;
+};
 
 export function useTokenSafety() {
   const [result, setResult] = useState<TokenCheckResponse | null>(null);

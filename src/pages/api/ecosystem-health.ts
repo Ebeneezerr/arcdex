@@ -1,8 +1,45 @@
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
-import { deriveHealthSignal } from '@hydra/dna-engine';
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+function deriveHealthSignal(
+  alerts?: { severity?: string; alerts?: { field?: string }[]; scoreDelta?: number }[] | null,
+  interactReport?: { sustainabilityScore: number; rewardRunwayDays: number }
+) {
+  try {
+    if (!alerts || !Array.isArray(alerts) || alerts.length === 0) {
+      return 'STABLE' as const;
+    }
+
+    const latest = alerts[alerts.length - 1];
+    const severity = String(latest?.severity ?? '').toUpperCase();
+    if (severity === 'CRITICAL') return 'CRITICAL' as const;
+
+    const codes = Array.isArray(latest?.alerts)
+      ? latest.alerts.map((alert) => String(alert?.field ?? '')).filter(Boolean)
+      : [];
+
+    if (codes.includes('lpReserve0') || codes.includes('lpReserve1')) {
+      return 'LIQUIDITY_CRISIS' as const;
+    }
+
+    if (codes.includes('riskScore') && Number(latest.scoreDelta) >= 20) {
+      return 'HIGH_VOLATILITY' as const;
+    }
+
+    if (interactReport) {
+      if (interactReport.rewardRunwayDays < 30) return 'REWARD_DRAIN' as const;
+      if (interactReport.sustainabilityScore < 40) return 'LOW_RETENTION' as const;
+    }
+
+    if (severity === 'WARN') return 'HIGH_VOLATILITY' as const;
+
+    return 'STABLE' as const;
+  } catch {
+    return 'STABLE' as const;
+  }
+}
 
 function stableHealthResponse() {
   return {

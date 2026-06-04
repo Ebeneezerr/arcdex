@@ -1,5 +1,14 @@
 import React from 'react';
-import type { TokenCheckResponse } from '@hydra/listing-gate';
+
+type TokenCheckResponse = {
+  safe: boolean;
+  score: number;
+  verdict: string;
+  blocked: boolean;
+  warnings: { code: string; severity: string; message: string }[];
+  timestamp: string;
+  cached: boolean;
+};
 
 export default function TokenSafetyBadge({ result }: { result: TokenCheckResponse | null }) {
   if (!result) return null;

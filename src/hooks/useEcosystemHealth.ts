@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react';
-import type { HealthSignal } from '@hydra/dna-engine';
+
+type HealthSignal =
+  | 'STABLE'
+  | 'LIQUIDITY_CRISIS'
+  | 'GOVERNANCE_SEASON'
+  | 'HIGH_VOLATILITY'
+  | 'LOW_RETENTION'
+  | 'REWARD_DRAIN'
+  | 'CRITICAL';
 
 export interface EcosystemHealthState {
   signal: HealthSignal;
