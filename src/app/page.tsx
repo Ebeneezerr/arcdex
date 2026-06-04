@@ -196,11 +196,11 @@ export default function Home() {
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-3xl bg-slate-900/90 p-4 text-sm text-slate-200 ring-1 ring-slate-700">
-                <p className="uppercase tracking-[0.2em] text-slate-500">Token A</p>
+                <p className="uppercase tracking-[0.2em] text-slate-500">{tokenAName}</p>
                 <p className="mt-2 text-2xl font-semibold">{tokenASymbol}</p>
               </div>
               <div className="rounded-3xl bg-slate-900/90 p-4 text-sm text-slate-200 ring-1 ring-slate-700">
-                <p className="uppercase tracking-[0.2em] text-slate-500">Token B</p>
+                <p className="uppercase tracking-[0.2em] text-slate-500">{tokenBName}</p>
                 <p className="mt-2 text-2xl font-semibold">{tokenBSymbol}</p>
               </div>
               <div className="rounded-3xl bg-slate-900/90 p-4 text-sm text-slate-200 ring-1 ring-slate-700">
